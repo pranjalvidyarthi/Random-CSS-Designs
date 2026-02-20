@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes / No Toggle Button</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #87aade;
+    }
+    input {position:absolute; opacity:0;}
+    label{
+        width: 7em;
+        height: 3em;
+        background: #2e394d;
+        border-radius: 50px;
+        position: relative;
+        cursor: pointer;
+    }
+    .check{
+        width: 2.5em;
+        height: 2.5em;
+        background-color: #8Bc34A;
+        border-radius: 50%;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        transition: 0.4s;
+    }
+
+    .check::before,
+    .check::after{
+        content: '';
+        position: absolute;
+        height: 4px;
+        background: #fff;
+        border-radius: 10px;
+    }
+    .check::before{
+        width: 25px;
+        transform: rotate(-45deg) translate(-6px, 20px);
+    }
+
+    .check::after{
+        width: 10px;
+        transform: rotate(45deg) translate(20px, 11px);
+    }
+    input:checked + label .check{
+        left: 68px;
+        background: #c34a4a;
+        transform: rotate(360deg);
+    }
+
+    input:checked + label .check::after{
+        width:27px;
+    }
+</style>
+<body>
+    <input type="checkbox" id="checkcross">
+    <label for="checkcross">
+        <div class="check"></div>
+    </label>
+</body>
+</html>

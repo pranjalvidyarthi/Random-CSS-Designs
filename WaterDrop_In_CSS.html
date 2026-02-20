@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Drop </title>
+</head>
+<style>
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fff, #eff0f4);
+}
+.drop{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: inset 15px 15px 20px rgba(0,0,0,0.1),
+    inset -15px -15px 20px rgba(255,255,255,1);
+    border-radius: 10px solid rgba(255,255,255,0.700);
+}
+.drop::before{
+    content: '';
+    position: absolute;
+    inset: 15px;
+    box-shadow: inset 10px 10px 10px #fff;
+    border-radius: 50%;
+    filter: blur(5px);
+    border-radius: 10px solid white;
+}
+</style>
+<body>
+    <div class="drop"></div>
+</body>
+</html>

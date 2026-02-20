@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Normal Toggle</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#dec387;
+  font-family:Rubik, sans-serif;
+}
+
+input{
+  position:absolute;
+  opacity:0;
+}
+
+.toggle{
+  position:relative;
+}
+
+label{
+  width:7em;
+  height:3em;
+  background:#af4c4c;
+  border-radius:50px;
+  display:inline-block;
+  position:relative;
+  cursor:pointer;
+  box-shadow: inset 0 0 4px rgba(0,0,0,.2), 0 -3px 4px rgba(0,0,0,.15);
+}
+
+label::before{
+  content:"";
+  width:2.5em;
+  height:2.5em;
+  background:#fff;
+  position:absolute;
+  top:.25em;
+  left:.25em;
+  border-radius:50%;
+  transition:.3s;
+}
+
+input:checked + label{
+  background:#4caf50;
+}
+
+input:checked + label::before{
+  left:4.2em;
+}
+</style>
+</head>
+
+<body>
+  <div class="toggle">
+    <input type="checkbox" id="normal">
+    <label for="normal"></label>
+  </div>
+</body>
+</html>
